@@ -54,10 +54,126 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased bg-gray-50 text-gray-900`}
-      >
+      <body className={`${poppins.variable} bg-gray-50 text-gray-900`}>
+        <header>
+          <nav style={{ backgroundColor: "#f8f9fa", padding: "10px 20px" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <h1 style={{ margin: 0, fontSize: "24px" }}>Himalayan Bazar</h1>
+              <ul
+                style={{
+                  listStyleType: "none",
+                  display: "flex",
+                  gap: "20px",
+                  margin: 0,
+                }}
+              >
+                <li>
+                  <a
+                    href="/"
+                    style={{ color: "#007bff", textDecoration: "none" }}
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/products"
+                    style={{ color: "#007bff", textDecoration: "none" }}
+                  >
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/about"
+                    style={{ color: "#007bff", textDecoration: "none" }}
+                  >
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/contact"
+                    style={{ color: "#007bff", textDecoration: "none" }}
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
         {children}
+        <footer
+          style={{
+            textAlign: "center",
+            padding: "20px",
+            backgroundColor: "#f8f9fa",
+          }}
+        >
+          <p style={{ margin: 0 }}>
+            © 2023 Himalayan Bazar. All rights reserved.
+          </p>
+          <p style={{ margin: 0 }}>
+            <a
+              href="/privacy-policy"
+              style={{ color: "#007bff", textDecoration: "none" }}
+            >
+              Privacy Policy
+            </a>{" "}
+            |{" "}
+            <a
+              href="/terms-of-service"
+              style={{ color: "#007bff", textDecoration: "none" }}
+            >
+              Terms of Service
+            </a>{" "}
+            |{" "}
+            <a
+              href="/contact"
+              style={{ color: "#007bff", textDecoration: "none" }}
+            >
+              Contact Us
+            </a>
+          </p>
+          <p style={{ margin: 0 }}>
+            Follow us on{" "}
+            <a
+              href="https://www.facebook.com/himalayanbazar"
+              style={{ color: "#007bff", textDecoration: "none" }}
+            >
+              Facebook
+            </a>
+            ,{" "}
+            <a
+              href="https://www.instagram.com/himalayanbazar"
+              style={{ color: "#007bff", textDecoration: "none" }}
+            >
+              Instagram
+            </a>
+            ,{" "}
+            <a
+              href="https://www.twitter.com/himalayanbazar"
+              style={{ color: "#007bff", textDecoration: "none" }}
+            >
+              Twitter
+            </a>
+            ,{" "}
+            <a
+              href="https://www.linkedin.com/company/himalayanbazar"
+              style={{ color: "#007bff", textDecoration: "none" }}
+            >
+              LinkedIn
+            </a>
+          </p>
+          <p>Footer</p>
+        </footer>
       </body>
     </html>
   );
